@@ -1,17 +1,79 @@
-
-.top-bar, .top-bar ul {
-  background: #333333;
+.page-title {
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
 }
 
-.active-link {
-    font-weight: bold;
-}
-
-.top-bar .menu-text {
-  color: white;
-}
-
-.menu > .menu-text > a {
-   display: inline;
+.container {
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
   padding: 0;
+  margin-bottom: 2rem;
+}
+
+.container__header {
+  border-bottom: 1px solid #eeeeee;
+  padding: 1rem;
+}
+
+.container__header label {
+  cursor: pointer;
+  font-size: 1rem;
+
+}
+
+.container__header:last-child {
+  align-items: center;
+  display: flex;
+}
+
+.container__message {
+  color: #aaaaaa;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.container__footer {
+  border-top: 1px solid #eeeeee;
+  padding: 1rem 1rem 0 1rem;
+  
+}
+
+.todo {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  padding: 1rem;
+  transition: background 0.3s ease;
+
+}
+
+.todo p, input {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.todo:first-child {
+  margin-right: 1rem;
+}
+
+.todo:hover {
+  background: #f0f0f0;  
+}
+
+.todo__subtext {
+  color: #999;
+  
+
+}
+
+.todo-completed {
+
+}
+
+.todo-completed p, .todo-subtext {
+    color: #aaaaaa;
+    text-decoration: line-through;
+  
 }

@@ -1,6 +1,10 @@
 var expect = require("expect");
 var df = require("deep-freeze-strict");
+var uuid = require("node-uuid");
+var moment = require("moment");
+
 var reducers = require("reducers");
+
 
 describe("Reducers", ()=> {
     describe("searchTextReducer", ()=> {
@@ -24,5 +28,43 @@ describe("Reducers", ()=> {
 
             expect(res).toEqual(true);
         });
+    });
+
+    describe("todosReducer", ()=> {
+        it("should add new todo", ()=> {
+            var action = {
+                type: "ADD_TODO",
+                text: "Eat a cookie"
+            };
+            var res = reducers.todosReducer(df([]), df(action));
+
+            expect(res.length).toEqual(1);
+            expect(res[0].text).toEqual(action.text);
+        });
+
+        it("should toggle todo ", ()=> {
+            var action = {
+                type: "TOGGLE_TODO",
+                id: 1
+            }
+            var todos = [
+                {
+                    id: 1,
+                    text: "test one",
+                    completed: true,
+                    createdAt: 123,
+                    completedAt: 125
+                }
+            ];
+
+            var res = reducers.todosReducer(df(todos), df(action));
+
+            expect(res[0].completed).toEqual(false);
+            expect(res[0].completedAt).toEqual(undefined);
+        });
+
+        //define todos array with realistic todo item
+        //generate actoin 
+        //call reducer and assert completed flipped
     });
 });

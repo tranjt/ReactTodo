@@ -66,9 +66,13 @@
   color: #999;  
 }
 
-.todo-completed p, .todo__subtext {
+.todo.todo-completed p {
     color: #aaaaaa;
-    text-decoration: line-through;
-  
+    text-decoration: line-through;  
+}
+
+.todo.todo-completed p.todo__subtext {
+    color: #aaaaaa;
+    text-decoration: line-through;  
 }
 

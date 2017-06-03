@@ -62,9 +62,5 @@ describe("Reducers", ()=> {
             expect(res[0].completed).toEqual(false);
             expect(res[0].completedAt).toEqual(undefined);
         });
-
-        //define todos array with realistic todo item
-        //generate actoin 
-        //call reducer and assert completed flipped
     });
 });

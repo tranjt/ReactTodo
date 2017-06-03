@@ -42,9 +42,7 @@ export var todosReducer = (state = [], action)=> {
                     completed: nextCompleted,
                     completedAt: nextCompleted ? moment().unix() : undefined
                 };
-            });
-            
-        // add case for toggle_todo completed to opposite value and updatecomlated
+            });            
         default:
             return state;
     };

@@ -4,8 +4,9 @@ var actions = require("actions");
 var moment = require("moment");
 
 export var Todo = React.createClass({
-    handleClick: function() {        
-        this.props.dispatch(actions.toggleTodo(this.props.id));
+    handleClick: function() {
+        var {id, completed} = this.props;
+        this.props.dispatch(actions.startToggleTodo(id, !completed));
     },
     render: function() {
         var {id, text, completed, createdAt, completedAt, dispatch} = this.props;

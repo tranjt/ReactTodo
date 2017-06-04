@@ -27,7 +27,8 @@ module.exports = {
             "./app/components",
             "./app/api"
         ],
-        alias: {           
+        alias: {
+           app: "app",
            applicationStyle: "app/styles/app.css",      
            actions: "app/actions/actions.jsx",
            reducers: "app/reducers/reducers.jsx",

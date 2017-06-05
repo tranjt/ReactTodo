@@ -27,10 +27,16 @@ firebaseRef.set({
 });
 
 var todosRef =  firebaseRef.child("todos");
+// todosRef.once("value").then((snapshot)=> {
+
+// })
+
 
 todosRef.on("child_added", (snapshot)=>{
     console.log("child_added", snapshot.key, snapshot.val());
 })
+
+
 
 todosRef.push({
     name: "Eat a cookie"

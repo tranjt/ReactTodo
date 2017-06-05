@@ -91,6 +91,28 @@ describe("Actions", ()=> {
         expect(res).toEqual(action);
     });
 
+    it("should generate login action object", ()=> {
+        var uid = "someid";
+        var action = {
+            type: "LOGIN",
+            uid: uid
+        };
+
+        var res = actions.login(uid);
+        expect(res).toEqual(action);
+    });
+
+    it("should generate logout action object", ()=> {       
+        var action = {
+            type: "LOGOUT"           
+        };
+
+        var res = actions.logout();
+        expect(res).toEqual(action);
+    });
+
+
+
     describe("Test with firebase todo", ()=> {
         var testTodoRef;
 
@@ -145,7 +167,7 @@ describe("Actions", ()=> {
 
             }).catch(done);
 
-        });
+        });    
 
     });
 });

@@ -76,3 +76,22 @@
     text-decoration: line-through;  
 }
 
+.page-actions{
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2rem 0 0 ;
+}
+
+.callout-auth {
+  background-color: #fafafa;
+  border: 1px solid  #eeeeee;
+  padding: 2rem;
+  text-align: center;
+}
+
+.callout-auth h3 {
+  margin-bottom: 2rem;
+}
+.callout-auth hp3 {
+  margin-bottom: 2rem;
+}

@@ -1,12 +1,12 @@
 import firebase from "firebase";
 
  var config = {
-    apiKey: "AIzaSyBuF7GFOkUKY1BE4UGklBYDHCALcJmcdDg",
-    authDomain: "jtt-todo-app.firebaseapp.com",
-    databaseURL: "https://jtt-todo-app.firebaseio.com",
-    projectId: "jtt-todo-app",
-    storageBucket: "jtt-todo-app.appspot.com",
-    messagingSenderId: "205352226925"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DATABASE_URL,  
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID
 };
 
 firebase.initializeApp(config);

@@ -37,13 +37,13 @@ export var todosReducer = (state = [], action)=> {
                      return {
                         ...todo,
                         ...action.updates
-                     };
-                                  
+                     };                                  
                 } else {
                     return todo;
-                }
-               
-            });            
+                }               
+            }); 
+        case "LOGOUT":
+            return [];
         default:
             return state;
     };
